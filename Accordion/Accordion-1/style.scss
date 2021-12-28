@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: block;
+  min-height: 100vh;
+  background: #fff;
+}
+
+.accordion{
+  padding: 10px 40px;
+  width: 100%;
+  outline: none;
+  border: none;
+  background: #eee;
+  text-align: center;
+
+  &:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  &.active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+  }
+}
+
+.panel{ 
+  width: 100%;
+  display: block;
+  max-height: 0;
+  transition: all 0.25s ease;
+  overflow: hidden;
+}

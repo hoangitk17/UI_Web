@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <button class="accordion" id="accordion" accordion-for="section1">Section 1</button>
+  <div class="panel" id="section1">
+    <p>Lorem ipsum...</p>
+    <p>Lorem ipsum...</p>
+    <p>Lorem ipsum...</p>
+    <p>Lorem ipsum...</p>
+    <p>Lorem ipsum...</p>
+    <p>Lorem ipsum...</p>
+    <p>Lorem ipsum...</p>
+    <p>Lorem ipsum...</p>
+    <p>Lorem ipsum...</p>
+    <p>Lorem ipsum...</p>
+    <p>Lorem ipsum...</p>
+    <p>Lorem ipsum...</p>
+    <p>Lorem ipsum...</p>
+    <p>Lorem ipsum...</p>
+    <p>Lorem ipsum...</p>
+    <p>Lorem ipsum...</p>
+    <p>Lorem ipsum...</p>
+    <p>Lorem ipsum...</p>
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      var acc = document.getElementById("accordion");
+      acc.addEventListener("click", function () {
+        this.classList.toggle("active");
+        let panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      })
+    })
+  </script>
+</body>
+
+</html>
