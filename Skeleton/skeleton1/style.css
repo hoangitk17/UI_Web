@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: block;
+  min-height: 100vh;
+  background: #fff;
+}
+
+.card {
+  width: 250px;
+  margin: 20px auto;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.4);
+}
+.card .user-info {
+  display: flex;
+  margin-bottom: 5px;
+}
+.card .user-info .name {
+  margin-left: 5px;
+  width: 100%;
+}
+
+.skeleton-loading .logo,
+.skeleton-loading .content,
+.skeleton-loading .name {
+  position: relative;
+  overflow: hidden;
+}
+.skeleton-loading .logo::before,
+.skeleton-loading .name::before,
+.skeleton-loading .content::before {
+  background-color: #ddd;
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.skeleton-loading .logo::after,
+.skeleton-loading .name::after,
+.skeleton-loading .content::after {
+  background: linear-gradient(to right, #ddd, #fff 50%, #ddd);
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  animation: skeleton-loading 1s infinite alternate;
+}
+
+@keyframes skeleton-loading {
+  from {
+    left: -50%;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
