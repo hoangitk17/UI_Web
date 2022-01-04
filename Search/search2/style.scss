@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.simple-search {
+  width: 100%;
+  display: flex;
+  padding: 5px;
+  background-color: white;
+  border-radius: 4px;
+  border: 1px solid #eee;
+  button {
+    border: 0;
+    outline: none;
+    padding: 10px 20px;
+    color: white;
+    flex-shrink: 0;
+    border-radius: 4px;
+    background-color: #22c58b;
+    cursor: pointer;
+  }
+
+  input {
+    border: 0;
+    outline: none;
+    width: 100%;
+    padding: 10px;
+    background-color: transparent;
+    -webkit-appearance: none;
+    font-size: 14px;
+    font-weight: 500;
+  }
+}
