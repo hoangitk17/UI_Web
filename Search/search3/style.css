@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Main code */
+.simple-search {
+  width: 100%;
+  display: flex;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 12px 2px rgba(3, 3, 3, 0.05);
+}
+.simple-search button {
+  padding: 15px 30px;
+  color: white;
+  flex-shrink: 0;
+  background-color: #2cccff;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+}
+.simple-search button:hover {
+  background-color: rgba(44, 204, 255, 0.9);
+}
+.simple-search input {
+  width: 100%;
+  padding: 15px;
+  background-color: white;
+  -webkit-appearance: none;
+  font-size: 14px;
+  font-weight: 500;
+  border: 0;
+  outline: none;
+}
+
+/*# sourceMappingURL=style.css.map */
