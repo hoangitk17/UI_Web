@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div style="max-width: 800px; margin: 50px auto;">
+    <label class="form-control">
+      <input type="checkbox" name="checkbox" />
+      Checkbox
+    </label>
+
+    <label class="form-control">
+      <input type="checkbox" name="checkbox-checked" checked />
+      Checkbox - checked
+    </label>
+  </div>
+
+  <script>
+    window.addEventListener("load", function () {
+      const dropdownItems = document.querySelectorAll(
+        "#lightdropdown .dropdown-item"
+      );
+      const dropdownSelect = document.querySelector(
+        "#lightdropdown .dropdown-select"
+      );
+      const dropdownSelectText = document.querySelector(
+        "#lightdropdown .dropdown-selected"
+      );
+      const dropdownList = document.querySelector(
+        "#lightdropdown .dropdown-list"
+      );
+      const dropdownCaret = document.querySelector(
+        "#lightdropdown .dropdown-caret"
+      );
+
+      dropdownSelect.addEventListener("click", function () {
+        dropdownList.classList.toggle("show");
+        dropdownCaret.classList.toggle("fa-angle-up");
+      });
+
+      function handleSelectDropdown(e) {
+        const { value } = e.target.dataset;
+        dropdownSelectText.textContent = value;
+        dropdownList.classList.remove("show");
+        dropdownCaret.classList.remove("fa-angle-up");
+      }
+
+      dropdownItems.forEach((el) =>
+        el.addEventListener("click", handleSelectDropdown)
+      );
+    });
+  </script>
+</body>
+
+</html>
